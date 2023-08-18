@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="d1"></ol>
+    <button id="asc" onclick="asc()">ascending order</button>
+    <button id="dsc" onclick="dsc()">decending order</button>
+    <button onclick="original()">original</button>
+    <script>
+        var students=['rajesh','lokesh','abhi','vamsi','sai']
+        var ele=document.getElementById('d1')
+       students.forEach(function(x){
+        var newli=document.createElement("li")
+        newli.innerHTML=x;
+        ele.appendChild(newli)
+       })
+
+       function original(){
+
+        document.getElementById('d1').innerHTML=" "
+        var students=['rajesh','lokesh','abhi','vamsi','sai']
+
+        students.forEach(function(x){
+        var newli=document.createElement("li")
+        newli.innerHTML=x;
+        ele.appendChild(newli)
+       })
+
+        
+       }
+
+       function dsc(){
+        students.sort(function(a,b){
+            if(a>b){return -1}
+            else{return 1}
+        })
+        document.getElementById('d1').innerHTML=" "
+        students.forEach(function(x){
+        var newli=document.createElement("li")
+        newli.innerHTML=x;
+        ele.appendChild(newli)
+       })
+       }
+
+
+       function asc(){
+        students.sort(function(a,b){
+            if(a>b){return 1}
+            else{return -1}
+        })
+        document.getElementById('d1').innerHTML=" "
+        students.forEach(function(x){
+        var newli=document.createElement("li")
+        newli.innerHTML=x;
+        ele.appendChild(newli)
+       })
+       }
+        
+      
+    
+
+    </script>
+</body>
+</html>

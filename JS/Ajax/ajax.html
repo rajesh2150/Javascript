@@ -1,0 +1,23 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <body>
+        <ul id="d1">
+
+        </ul>
+        <script>
+            // Ajax Is Used When JS Req to Server
+            $.get("https://fakestoreapi.com/products",function(data,status){
+                if(data){
+                    console.log('Data::',data)
+                }
+                else{
+                    console.log("Status::",status)
+                }
+            })
+
+
+
+        </script>
+    </body>
+</html>

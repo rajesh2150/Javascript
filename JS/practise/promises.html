@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            function add(){
+                
+                sum=10
+                var sum2=sum>=10?console.log(Promise.resolve(sum)):Promise.reject('someting wrong');
+
+              
+
+
+               if(sum>10){
+                return Promise.resolve(sum)
+               }
+                else{
+                    return Promise.reject('someting wrong')
+                }
+                console.log(sum)
+            }
+            add().then((data)=>{console.log(data)}).catch((error)=>{console.log(error)})
+
+            
+        </script>
+    </body>
+</html>

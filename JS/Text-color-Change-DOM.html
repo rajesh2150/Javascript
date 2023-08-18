@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="d1">Hello Rajesh</h1>
+        <button onclick="myclick4()">Change Text</button>
+        <button onclick="myclick(event)">Next Color</button>
+        <button onclick="myclick2()">Previous Color</button>
+        <button onclick="myclick3()">Change Paragraphs BG Color</button>
+
+        <p>
+                Support WebAssembly debugging
+                Chrome DevTools supports WebAssembly debugging with DWARF information (using an extension).
+                Better assertions in the Recorder
+                Add assertions right during recording, with all runtime data available to you.
+                Lighthouse 10.1.1
+                Lighthouse now groups audit results by entity for better organization.
+        </p>
+        <p>
+                 Support WebAssembly debugging
+                Chrome DevTools supports WebAssembly debugging with DWARF information (using an extension).
+                Better assertions in the Recorder
+                Add assertions right during recording, with all runtime data available to you.
+                Lighthouse 10.1.1
+                Lighthouse now groups audit results by entity for better organization.
+
+        </p>
+         <p>
+                Support WebAssembly debugging
+                Chrome DevTools supports WebAssembly debugging with DWARF information (using an extension).
+                Better assertions in the Recorder
+                Add assertions right during recording, with all runtime data available to you.
+                Lighthouse 10.1.1
+                Lighthouse now groups audit results by entity for better organization.
+        </p>
+        <p>
+            Support WebAssembly debugging
+            Chrome DevTools supports WebAssembly debugging with DWARF information (using an extension).
+            Better assertions in the Recorder
+            Add assertions right during recording, with all runtime data available to you.
+            Lighthouse 10.1.1
+            Lighthouse now groups audit results by entity for better organization.
+    </p>
+    <p>
+             Support WebAssembly debugging
+            Chrome DevTools supports WebAssembly debugging with DWARF information (using an extension).
+            Better assertions in the Recorder
+            Add assertions right during recording, with all runtime data available to you.
+            Lighthouse 10.1.1
+            Lighthouse now groups audit results by entity for better organization.
+
+    </p>
+     <p>
+            Support WebAssembly debugging
+            Chrome DevTools supports WebAssembly debugging with DWARF information (using an extension).
+            Better assertions in the Recorder
+            Add assertions right during recording, with all runtime data available to you.
+            Lighthouse 10.1.1
+            Lighthouse now groups audit results by entity for better organization.
+    </p>
+    <ul id="u1"></ul>
+        <script>
+            var arr=['rajesh','lokesh','Mahesh','Abc','Xyz']
+            arr.forEach(function(x){
+                var newele=document.createElement("li");
+                newele.innerHTML=x;
+                document.getElementById('u1').appendChild(newele)
+            })
+            function myclick4(){
+                var z= document.getElementById('d1')
+                z.innerHTML='Text Is Changed '
+            }
+            
+
+
+            function myclick(event){
+                var x= document.getElementById('d1');
+                red='red'
+                x.style.color=red
+
+            }
+    
+            
+           
+            function myclick2(){
+                var x= document.getElementById('d1');
+                x.style.color='green'
+                x.style.backgroundColor='Yellow'
+            
+            }
+            function myclick3(){
+            var y=document.getElementsByTagName('p');
+            for(i=0;i<=y.length-1;i++){
+                if(i%2==0){
+                    y[i].style.backgroundColor='yellow'
+                }
+                else{
+                    y[i].style.backgroundColor='orange'
+                }
+            }
+           
+            }
+
+        </script>
+    </body>
+</html>

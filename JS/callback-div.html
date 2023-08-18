@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <script>
+            function div(a,b,cb){
+                if(isNaN(a) || isNaN(b)){
+                    cb('Enter valid numbers',null)
+                }
+                if(b===0){
+                    cb(' cant divide by zero',null)
+                }
+                else{
+                    cb(a/b)
+                }
+                function cb(err,res){
+                if(err){console.log(err)}
+                else{console.log(res)}
+                }
+            }
+            div(10,0)
+            div(10,2)
+
+        </script>
+    </body>
+</html>

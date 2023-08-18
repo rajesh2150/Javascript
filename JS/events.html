@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #d1{
+        background-color: red;
+        height: 300px;
+        width: 300px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #d2{
+        background-color: lightblue;
+        height: 300px;
+        width: 300px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #d3{
+        background-color: lightpink;
+        height: 300px;
+        width: 300px;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #d4{
+        background-color: lightgreen;
+      
+        height: 300px;
+        width: 300px;
+        color: black;
+        padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<body>
+    <div id="d1" onclick="myfunction(event)"></div>
+    <br>
+    <div id="d2" ondblclick="mydouble()"></div>
+    <br>
+    <div id="d3"></div>
+    <br>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <script>
+        count=0
+        function myfunction(e){
+            count++;
+            e.target.innerHTML='clicked '+count+' at '+e.clientX +"  "+ e.clientY
+        }
+        function myalert(event){
+            alert('Welcome to Event Listeners')
+        }
+        function mousefun(event){
+            myalert(event)
+        }
+        function mydouble(event){
+            alert("Welcome To Double Click  evensts")
+        }
+        var x=document.getElementById('d3')
+        x.addEventListener('click',function(){
+            alert('event handling using addEventListener')
+        })
+        var y=document.getElementById('d4');
+        y.onclick=function(){
+            alert('Direct Event Handling')
+        }
+        var newElement=document.createElement("h1");
+        newElement.innerHTML('Welcome All to Insert Data By JS')
+        document.getElementById('d5').appendChild(newElement)
+    </script>
+</body>
+</html>

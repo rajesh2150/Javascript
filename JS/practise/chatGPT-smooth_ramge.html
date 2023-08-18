@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    /* Add some basic styling to center the content */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .range-container {
+      text-align: center;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .value-display {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div class="range-container">
+      <input
+        type="range"
+        id="smoothRange"
+        min="0"
+        max="100"
+        value="0"
+        step="1"
+        oninput="updateValue(this.value)"
+      />
+      <div class="value-display" id="valueDisplay">0</div>
+    </div>
+
+    <script>
+      function updateValue(value) {
+        var valueDisplay = document.getElementById("valueDisplay");
+        valueDisplay.innerHTML = value;
+      }
+    </script>
+  </body>
+</html>

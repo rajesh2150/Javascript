@@ -1,0 +1,89 @@
+<html>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <body>
+        <script type="text/babel">
+            var names=
+            [
+                {
+                firstname:'Rajesh',
+                lastname:'Korlapati',
+                age:25
+                },
+                {
+                    firstname:'jyothi',
+                    lastname:'Korlapati',
+                    age:20
+
+                },
+                {
+                    firstname:'Vamsi',
+                    lastname:'Toram',
+                    age:25
+
+                }
+            ]
+        var delbtn=<button onClick={(e)=>{return e.target.parentElement.parentElement.remove()}}>Delete</button>
+           
+        var mytable=
+           
+                <table border='2px'>
+                        
+                        <tr>
+                            <td>FirstName</td>
+                            <td>LastName</td>
+                            <td>Age</td>
+                            <td>Action</td>
+                        </tr>
+                        <tbody>
+                            {
+                                names.map((name,i)=>{
+                                    return <tr>
+                                        <td>{name.firstname}</td>
+                                        <td>{name.lastname}</td>
+                                        <td>{name.age}</td>
+                                        <td>{delbtn}</td>
+                                    </tr>
+                                })
+                            }
+                        </tbody>
+                </table>
+           
+            
+               
+            ReactDOM.render(mytable,document.body)
+          
+      /*  var table1=    names.forEach((name,i)=>{return 
+                <table border='2px'>
+                       
+                       <tr>
+                           <td>FirstName</td>
+                           <td>LastName</td>
+                           <td>Age</td>
+                       </tr>
+               
+
+                  
+                    <tr>
+                        <td>{name[i].firstname}</td>
+                        <td>{name[i].lastname}</td>
+                        <td>{name[i].age}</td>
+
+                    </tr>
+               </table>
+            })
+       ReactDOM.render(table1,document.body)
+       
+           
+        */
+
+            
+
+          
+        </script>
+    </body>
+</html>
+        

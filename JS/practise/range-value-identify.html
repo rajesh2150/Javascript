@@ -1,0 +1,59 @@
+<html>
+    <body>
+        <input type="range" id="d1" min="0" max="500" value="0" step="1"  onchange="range(event)">
+    
+        <button id="text">0</button><br>
+        <ul id="d2">
+
+        </ul>
+        <script>
+
+            var values=[10,30,500,482,394,473,85,8,398,3000,488,10,45,499]
+
+            var resultValues=[]
+
+        
+            
+                document.getElementById('d2').innerHTML=' ';
+                values.forEach(function(v,i){
+                            var newli=document.createElement("li")
+                            newli.innerHTML=v;
+                            document.getElementById('d2').appendChild(newli)
+                            
+                        })
+           
+
+
+                        
+            function range(e){
+                document.getElementById('text').innerHTML=" ";
+                var rangeValue=document.getElementById('d1').value;
+                var boxValue=document.getElementById('text')
+                boxValue.innerHTML=rangeValue;
+                
+
+               
+              if(e.target.value>e.target.min){
+           
+               var  finalValue = values.forEach(function(v,i){
+               
+                        if(e.target.value>=v){
+
+                            resultValues.push(v)
+                          
+                        }
+                       
+                    })
+
+                }
+                console.log(resultValues.sort())
+            }
+           
+            
+
+
+            
+            
+        </script>
+    </body>
+</html>

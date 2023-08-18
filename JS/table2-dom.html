@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Add Student</legend>
+        <form name="studentform">
+            FirstName: <input type="text" id="firstname">
+            <br>
+            LastName: <input type="text" id="lastname">
+            <br>
+            Gender:
+            <input type="radio" name="gender" value="male" class="gender">Male
+            <input type="radio" name="gender" value="female" class="gender">Female
+            <br>
+            Select country:
+            <select name="country">
+                <option selected disabled>Select country</option>
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="japan">Japan</option>
+            </select>
+            <br>
+            Address:<br>
+            <textarea placeholder="Address" id="txtaddress" name="address"></textarea>
+            <br>
+            <button type="button" name="submit" onclick="addStudent()">Add Student</button>
+        </form>
+    </fieldset>
+
+    <br>
+    <br>
+    <table id="tb1" border="1">
+        <thead>
+            <tr>
+                <th id="fname">FirstName</th>
+                <th id="lname">LastName</th>
+                <th id="gender">Gender</th>
+                <th id="country">Country</th>
+                <th id="address">Address</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody id="tbl">
+
+        </tbody>
+    </table>
+    <script>
+        function addStudent() {
+            var firstname = document.getElementById('firstname').value;
+            var lastname = document.getElementById('lastname').value;
+            var gender = document.studentform.gender.value;
+            var country = document.studentform.country.value;
+            var address = document.studentform.address.value;
+        
+
+            console.log(firstname, lastname, gender, country, address);
+
+            var newtr = document.createElement("tr"); // Create a new table row for each student
+
+            var td = document.createElement("td");
+            td.innerHTML = firstname;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = lastname;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = gender;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = country;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = address;
+            newtr.appendChild(td);
+
+           var tr=document.createElement('td')
+           var deleteButton=document.createElement("button")
+           deleteButton.innerHTML='Delete'
+           newtr.appendChild(deleteButton)
+           deleteButton.addEventListener('click',function(event){
+           // console.dir(event.target)
+            event.target.parentElement.parentElement.remove()
+           })
+           
+
+            document.getElementById('tbl').appendChild(newtr); // Append the new row to the table body
+        }
+    </script>
+</body>
+</html>

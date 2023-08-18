@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function mobile(c,m,clr,r,s,p,d){
+            this.company=c;
+            this.model=m;
+            this.color=clr;
+            this.ram=r;
+            this.storage=s;
+            this.price=p;
+            this.discount=d;
+            this.finalPrice=function(){
+                var fp=this.price-(this.price*this.discount)/100
+                return fp
+            }
+
+        }
+        var mb1=new mobile('samsung','j7max','black',4,32,14000,12)
+        console.log(mb1)
+       // var finalPrice=mb1.price-(mb1.price*mb1.discount)/100
+
+
+        console.log(mb1.finalPrice())
+
+        var mb2=new mobile('MI','Note5','black',4,64,15000,15)
+        console.log(mb2)
+       // var finalPrice=mb2.price-(mb2.price*mb2.discount)/100
+        console.log(mb2.finalPrice())
+    </script>
+</body>
+</html>

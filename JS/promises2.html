@@ -1,0 +1,43 @@
+<html>
+    <body>
+        <script>
+           function div(a,b){
+            if(isNaN(a) || isNaN(b)){
+                return Promise.reject('Please Enter a number')
+            }
+            if(b===0){
+                return Promise.reject("cant divide by zero")
+            }
+            return Promise.resolve(a/b)
+           }
+           div(0,0).then(function(result){console.log(result)}).catch(function(error){console.log(error)})
+
+
+
+           const event=new Promise((resolve,reject)=>{
+            var name='rajesh'
+            if(name==='rajesh'){
+                resolve(name);
+            }
+            else{
+                reject('name is not rajesh');
+            }
+
+           })
+           event.then((n)=>{console.log(n)}).catch((err)=>{console.log(err)})
+
+
+           ///for multiplication
+
+           const mul=new Promise((result,error)=>{
+            if(isNaN(2) || isNaN(5)){
+                result(2*5)
+            }
+            else{
+                error('Invalid Multiplication ')
+            }
+           })
+           mul.then((res)=>{console.log(res)}).catch((err)=>{console.log(err)})
+        </script>
+    </body>
+</html>

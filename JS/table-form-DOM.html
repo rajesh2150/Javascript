@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="mysubmit(event)" name="studentform">
+        <label for="">FirstName</label>
+        <input type="text" name="firstname" onkeyup="update(event)">
+        <br>
+        <label for="">LastName</label>
+        <input type="text" name="lastname" onkeyup="update(event)">
+        <br>
+        <label for="">Mobile</label>
+        <input type="text" name="mobile" onkeyup="update(event)">
+        <br>
+        <label for="">Gender:</label>
+        <input type="radio" name="gender" value="male" onkeyup="update(event)" >Male
+        <input type="radio" name="gender" value="female" onkeyup="update(event)">Female
+        <br>
+    
+        <select name="country" >
+            <option onkeyup="update(event)" selected disabled>Select Country</option>
+            <option onkeyup="update(event)" value="india" >India</option>
+            <option onkeyup="update(event)" value="australia">Australia</option>
+            <option onkeyup="update(event)" value="usa">USA</option>
+            <option onkeyup="update(event)" value="uk">UK</option>
+            <option onkeyup="update(event)" value="pakistan">Pakistan</option>
+        </select>
+        <button onclick="myclick()" > Add Student</button>
+    </form>
+    <br>
+    <br>
+    <table border="2">
+        <thead >
+            <th>Sno.</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Mobile</th>
+            <th>Gender</th>
+            <th>Country</th>
+        </thead>
+        <tbody id="d1">
+
+        </tbody>
+    </table>
+    <script>
+      //  <button onclick="myclick2()" type="button > Add Student</button>
+      /* function myclick2(){
+        alert('Click2 Event Occured')
+        }
+    */
+  
+        var studentdetails={
+            firstname:' ',
+            lastname:' ',
+            mobile:' ',
+            gender:' ',
+            country:' ',
+
+        }
+
+
+        function update(ev){
+            //student object key is assigned to its valuee
+                studentdetails[ev.target.name] = ev.target.value;
+             console.log(document.studentform.gender.value)
+
+           
+
+                //studentdetails[ev.target.type === 'radio']= ev.target.checked.value
+                //studentdetails[ev.target.name]=ev.target.value
+
+            
+        }
+        
+        
+        function mysubmit(event){
+            event.preventDefault()
+            
+            console.log(studentdetails)
+           // studentdetails.firstname=document.studentform.firstname.value
+            //studentdetails.lastname=document.studentform.lastname.value
+           // studentdetails.mobile=document.studentform.mobile.value
+            
+            
+        }
+        function myclick(){
+            //alert('Click Event Occured')
+        }
+       console.log(document.studentdetails.target)
+    </script>
+</html>

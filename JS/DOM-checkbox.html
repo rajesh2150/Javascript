@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Games:<span id="d2"></span></h1>
+    <input type="checkbox" id="d1" name="games" value="cricket" onclick="games(event)">Cricket
+    <input type="checkbox" id="d1" name="games" value="chess"  onclick="games(event)">Chess
+    <input type="checkbox" id="d1" name="games" value="Football"  onclick="games(event)">football
+    <script>
+        var selectedGames=[]
+        function games(e){
+       
+            if(e.target.checked===false){
+                 var ind=selectedGames.indexOf(e.target.value)
+                 selectedGames.splice(ind,1)
+            }
+            else{
+            selectedGames.push(e.target.value) 
+            
+            }
+            console.log(selectedGames)
+          
+        }   
+        
+    
+       
+    </script>
+</body>
+</html>

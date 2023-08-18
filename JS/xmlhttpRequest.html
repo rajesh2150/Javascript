@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script>
+            var http=new XMLHttpRequest();
+            console.log(http)
+            http.open("GET","https://fakestoreapi.com/products")
+            http.send()
+            http.onloadend=function(){
+               var result= http.response
+               var str=JSON.parse(result)
+               console.log(str)
+            }
+            
+        </script>
+    </body>
+</html>

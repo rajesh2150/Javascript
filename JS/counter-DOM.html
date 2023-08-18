@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <button id="inc" onclick="inc()">Increment</button>
+    <button id="dec" onclick="dec()">Decrement</button>
+    <button id="reset" onclick=" reset()">Reset</button>
+<script>
+count=0
+
+function inc(){
+    count ++;
+    h1.innerHTML='counter: '+count
+    ele.appendChild(h1)
+
+}
+function dec(){
+    count --;
+    h1.innerHTML='counter: '+count
+    ele.appendChild(h1)
+
+}
+function reset(){
+    count=0;
+    h1.innerHTML='counter: '+count
+    ele.appendChild(h1)
+
+}
+    var ele=document.getElementById('d1')
+    var h1=document.createElement("h1")
+    h1.innerHTML='counter:'+count
+    ele.appendChild(h1)
+</script>
+</body>
+</html>

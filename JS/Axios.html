@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <input type="text" id="text" onclick="search(event)">
+        <ul id="d1">
+
+        </ul>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <script>
+            //Fecth is huge so we can implement by Axios library
+            axios.get("https://fakestoreapi.com/products")
+            .then(function(res){
+          var products=  res.data.forEach(function(p){
+                var newli=document.createElement("li");
+                newli.innerHTML=p.title ;
+
+                newli2=document.createElement("li")
+                newli2.innerHTML=p.image
+
+                document.getElementById('d1').appendChild(newli)
+                newli.appendChild(newli2)
+              
+
+            })
+            })
+            .catch(function(err){console.log(err)})
+
+            
+            
+            
+        </script>
+    </body>
+</html>

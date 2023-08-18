@@ -1,0 +1,35 @@
+<html>
+    <head></head>
+    <body>
+        <div  style="color: black;" id="d1">count</div>
+        <br>
+        <button onclick="next()">Next</button>
+        <button onclick="prev()">Prev</button>
+        <script>
+            var arr1=['https://i1.wp.com/godofindia.com/wp-content/uploads/2017/05/pawan-kalyan-25.jpg',
+           ' https://i1.wp.com/godofindia.com/wp-content/uploads/2017/05/pawan-kalyan-28.jpg',
+           'https://godofindia.com/wp-content/uploads/2017/05/pawan-kalyan-30.jpg'
+        ]
+        var arr3=[10,20,304,405]
+        //next
+       var count=2
+       function next(){
+       // for(i=count;i<=arr3.length-1;i++){
+        var ele=document.createElement("h3")
+        ele.innerHTML=arr3
+        document.getElementById('d1').appendChild(ele)
+       
+       }
+       
+       function prev(){
+        count--;
+        var x = document.getElementById('d1')
+       x.innerHTML='count '+ count;
+       }
+      
+
+
+          
+        </script>
+    </body>
+</html>

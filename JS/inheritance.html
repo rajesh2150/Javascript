@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script>
+            class company{
+                comp_name='tcs';
+                role='SWE'
+
+
+            }
+            class details extends company{
+                email='avc@gmail';
+                number;
+            }
+            class employee extends details{
+                emp(fn,ln,e,n){
+                    this.firstname=fn;
+                    this.lastname=ln;
+                   // this.email=e;
+                    this.number=n
+
+                }
+              
+            }
+            employee.prototype.role='JavaScript'
+            var obj=new employee()
+            obj.emp('Rajesh','Korlapati',' ',97)
+            console.dir(obj)
+            
+            var obj2=new details();
+            obj2.email='rajesh@gmail.com'
+            console.log(obj2.email)
+            console.log('obj2 for details ',obj2 instanceof details)
+            console.log('obj2 for company',obj2 instanceof company)
+
+            console.log('obj2 for',obj instanceof company,obj instanceof details,obj instanceof employee)
+          
+        </script>
+    </body>
+</html>

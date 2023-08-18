@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            function add(a=0,b=0,c=0){
+                return a+b+c;
+            }
+
+            function mul(a=1,b=1,c=1){
+                return a*b*c
+            }
+            console.log(mul(10,203,4))// passing 3 values
+            console.log(mul(10,4))// passing 2 values
+
+            console.log(add(12,39)) // passing 2 values
+
+            console.log(add(10,51,6)) // passing 3 values
+
+            function addition(...x){
+               return (x)      //REST Parameters
+            }
+
+            console.log(  addition(10,20,30,40,5,4,0));
+
+        </script>
+    </body>
+</html>

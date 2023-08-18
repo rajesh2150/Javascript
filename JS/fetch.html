@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            fetch("https://fakestoreapi.com/products")
+            .then(function(res){
+                res.json().then(function (data) { // we can also use arrow function .then((data)=>{console.log(data)}
+                    console.log(data)
+
+                }
+            )})
+
+            .catch(function(err){
+                if(err){
+                    console.log('Something went Wromg')
+                }
+            })
+
+console.log('last line in code') //this executes first
+//This Is Huge Process we can Impliment this process by Axios Library 
+
+        </script>
+    </body>
+</html>

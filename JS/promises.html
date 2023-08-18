@@ -1,0 +1,20 @@
+<htmml>
+    <body>
+        <script>
+            function div(a,b){
+                if(isNaN(a) || isNaN(b)){
+                   return Promise.reject('Enter Numbers Only')
+                }
+                if(b===0){
+                   return  Promise.reject('Cant Divide with zero')
+                }
+                else{
+                   return Promise.resolve(a/b)
+                }
+            }
+         div(10,5).then(function(res){console.log(res)}).catch(function(err){console.log(err)})
+         div(94,4).then(function(res){console.log(res)}).catch(function(err){console.log(err)})
+
+        </script>
+    </body>
+</htmml>

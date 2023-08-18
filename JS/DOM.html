@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #d5{
+                color: black;
+
+            }
+        </style>
+        
+    </head>
+    <body>
+       
+        <button onclick="myclick()">Add Content</button>
+        <button onclick="clearall()" >Clear</button>
+        <div id="d1"></div>
+        <script>
+            count=0
+            function myclick(){
+                count++;
+                var content='welcome To DOM in JS '+ count
+                var newElement=document.createElement("h1");
+                newElement.innerHTML=content;
+                document.getElementById('d1').appendChild(newElement)
+                
+            }
+            function clearall(){
+                var x=document.getElementById('d1')
+                x.innerHTML=" ";
+            }
+          </script>
+    </body>
+</html>

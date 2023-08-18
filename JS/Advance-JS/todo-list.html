@@ -1,0 +1,79 @@
+<html>
+
+    <style>
+        .container{
+          display: flex;
+          
+        }
+        #text{
+
+            height: 30px;
+        }
+        button{
+            height: 30px;
+            color: wheat;
+            background-color: rgb(208, 35, 35);
+            border: none;
+            margin-left: 20px;
+        }
+        body{
+            background-color: lightgray;
+            
+        }
+        
+    </style>
+    <body>
+            <div class="main-div" style=" justify-content: center;">
+                <div class="container" style="display: flex;">
+                    <input type="text" id="text" placeholder="Add task">
+                    <button onclick="addtask()">Add task</button>
+                </div>
+                <div style="display: flex;
+                flex-direction: row;">
+                    <ul id="tasks"></ul>
+                </div>
+
+            </div>
+          
+            
+
+              
+
+
+
+
+        <script>
+            function addtask(){
+                var taskName=document.getElementById('text').value;
+
+                var newli=document.createElement("li")
+                newli.innerHTML=taskName;
+                newli.style.marginBottom='5px'
+                //newli.style.display='inline-block'
+                newli.style.backgroundColor='lightcyan'
+                newli.style.padding='10px'
+                newli.style.borderRadius='5px'
+
+                var delBtn=document.createElement("button") 
+                delBtn.innerText='Delete'
+                newli.appendChild(delBtn)
+
+                var doneBtn=document.createElement("button")
+                doneBtn.innerHTML='Done'
+                doneBtn.onclick=function(){
+                    doneBtn.parentElement.style.textDecoration='line-through'
+                }
+
+                newli.appendChild(doneBtn)
+                delBtn.onclick=function(event){
+                   console.log(delBtn.parentElement.remove())
+                }
+
+                document.getElementById("tasks").appendChild(newli)
+                document.getElementById('text').value=''
+            }
+      
+
+        </script>
+    </body>
+</html>

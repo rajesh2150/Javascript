@@ -1,0 +1,30 @@
+<html>
+     <body>
+        <script>
+            var obj=new Map()
+           obj.set("firstname","rajesh") //set used to set the key and value
+           obj.set("age",25)
+           console.log(obj.get("firstname"))
+           console.log(obj.get('age'))
+           console.log(obj.forEach(function(p){console.log(p)}))
+           console.log(obj.delete("age"))
+
+           const map1=new Map();
+           map1.set('name','rajesh')
+           map1.set('age','25')
+
+           console.log(map1)
+
+
+           //converting maps to keys
+           const m = new Map([
+					[ 1, 'one' ],
+					[ 2, 'two' ],
+					[ 3, 'three' ],
+			]);
+            const key=[...m.keys(),...m.values()]
+            console.log(key)
+
+        </script>
+     </body>
+</html>

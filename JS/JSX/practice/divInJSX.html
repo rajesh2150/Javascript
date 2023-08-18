@@ -1,0 +1,30 @@
+<html>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <body>
+        <script type="text/babel">
+            var arr=['https://i1.wp.com/godofindia.com/wp-content/uploads/2017/05/pawan-kalyan-25.jpg',
+                     'http://www.indiawords.com/wp-content/uploads/2017/11/Pawan-Kalyan-young-age-photos-1024x700.jpg',
+                     'https://1.bp.blogspot.com/-nivCYwfBRRQ/VFtTTlWBCAI/AAAAAAAAEZ0/flBQGUFm6l0/s1600/pawan_kalyan-wallpaper%2B4-745657.jpg'
+                    ]
+            var name=<h3 style={{color:'red'}}>Pawan Kalyan</h3>
+            var div1=arr.map((a)=>{return  <div>
+                <img src={a} style={{backgroundColor:'pink',width:'150px',height:'150px',display:'inline-block',margin:'10px'}}></img>
+                <h3 style={{color:'red'}}>Pawan Kalyan</h3>
+                </div>
+
+        
+        
+        })
+                                           
+
+        
+           
+            ReactDOM.render(div1,document.body)
+
+        </script>
+    </body>
+</html>

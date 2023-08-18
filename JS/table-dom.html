@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Add Student</legend>
+      <form name="studentform">
+        <label for="" > FirstName:</label>
+        <input type="text" id="firstname" />
+        <br />
+        LastName: <input type="text" id="lastname" />
+        <br />
+        Gender:
+        <input  type="radio" name="gender" value="male" class="gender" />Male
+        <input type="radio" name="gender" value="female" class="gender" />Female
+        <br />
+        Select country:
+        <select name="country" >
+          <option selected disabled>Select country</option>
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="japan">Japan</option>
+        </select>
+        <br />
+        Address:<br />
+        <textarea
+          placeholder="Address"
+          id="txtaddress"
+          name="address"
+        ></textarea>
+        <br />
+        Technology:<br>
+      <input type="checkbox"  name="technology" value="Python">Python<br>
+      <input type="checkbox"  name="technology" value="Java">Java<br>
+      <input type="checkbox"  name="technology"  value="MERN">MERN<br>
+      <input type="checkbox" name="technology" value="React">React JS<br>
+      <input type="checkbox"  name="technology" value="MEAN">MEAN<br>
+        <br>
+        <button type="button" name="submit" onclick="addStudent()">
+          Add Student
+        </button>
+      </form>
+    </fieldset>
+
+    <br />
+    <br />
+    <table id="tb1" border="1">
+      <thead>
+        <tr>
+          <th id="fname">FirstName</th>
+          <th id="lname">LastName</th>
+          <th id="gender">Gender</th>
+          <th id="country">Country</th>
+          <th id="address">Address</th>
+          <th>Technology</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbl"></tbody>
+    </table>
+    <hr>
+    <div id="sort"></div>
+    <script>
+        var students=[
+            {
+            firstname:'Rajesh ',
+            lastname:'Korlapati ',
+            gender:'male',
+            country:'india',
+            address:'East Godavari'
+
+            } ,
+            {
+            firstname:'Lokesh ',
+            lastname:'Kamisetty ',
+            gender:'male',
+            country:'india',
+            address:'East Godavari'
+
+            }
+
+             ]
+          for(i=0;i<=students.length-1;i++){
+            var newtr = document.createElement("tr");
+
+            var td = document.createElement("td");
+            td.innerHTML =students[i].firstname;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML = students[i].lastname;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML =students[i].gender;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML =students[i].country;
+            newtr.appendChild(td);
+
+            var td = document.createElement("td");
+            td.innerHTML =students[i].address;
+            newtr.appendChild(td);
+            // addStudent()
+            document.getElementById("tbl").appendChild(newtr);
+
+          }
+
+
+
+      function addStudent() {
+        var firstname = document.getElementById("firstname").value;
+        var lastname = document.getElementById("lastname").value;
+        var gender = document.studentform.gender.value;
+        var country = document.studentform.country.value;
+        var address = document.studentform.address.value;
+        //var technology=document.studentform.technology.value
+        //var technology=document.getElementsByName('technology')
+
+        //console.dir(technology.)
+       // console.dir(document.technology.name)
+
+        console.log(firstname, lastname, gender, country, address);
+
+        var newtr = document.createElement("tr");
+
+        var td = document.createElement("td");
+        td.innerHTML = firstname;
+        newtr.appendChild(td);
+
+        var td = document.createElement("td");
+        td.innerHTML = lastname;
+        newtr.appendChild(td);
+
+        var td = document.createElement("td");
+        td.innerHTML = gender;
+        newtr.appendChild(td);
+
+        var td = document.createElement("td");
+        td.innerHTML = country;
+        newtr.appendChild(td);
+
+        var td = document.createElement("td");
+        td.innerHTML = address;
+        newtr.appendChild(td);
+        // addStudent()
+        document.getElementById("tbl").appendChild(newtr);
+        // document.getElementById('tbl').appendChild(th)
+        console.dir(gender)
+      }
+    </script>
+  </body>
+</html>

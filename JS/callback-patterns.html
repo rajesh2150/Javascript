@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <script>
+            function div(a,b,cb){
+                if((a===0 || isNaN(a)) || (b===0 || isNaN(b))){
+                    cb('Enter valid Numbers',null)
+                }
+               cb(null,a/b)
+            }
+           div(10, 0,function(err,res){
+                if(err){console.log(err)}
+                else{console.log(res)}
+            })
+
+        </script>
+    </body>
+</html>

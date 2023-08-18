@@ -1,0 +1,46 @@
+Write a program to print 1 to 10 numbers using a while loop.
+Write a program to print 10 to 1 numbers using a while loop.
+Write a program to print 5 to 15 numbers using a while loop.
+Write a program to print 15 to 10 numbers using a while loop.
+Write a program to print 1 to 10 even numbers using a while loop.
+Write a program to print 1 to 10 odd numbers using a while loop.
+Write a program to print first ten multiples of 4 using a while loop(multiples of 4 are 4,8,12,16,20,.....).
+Write a program to print multiplication table of 6 using while loop.
+Write a program to print factors of 24 using while loop(factors of 24 are 1,2,3,4,6,8,12,24).
+Write a program to print the number of factors of 24 using while loop(number of factors for 24 is 8).
+Write a program to print 1 to 10 numbers using a for loop.
+Write a program to print 10 to 1 numbers using a for loop.
+Write a program to print all numbers from 1 to a given number.
+Write a program to print 1 to 10 even numbers using a for loop.
+Write a program to print 1 to 10 odd numbers using a for loop.
+Write a program to print first 10 multiples of 3.
+Write a program to print multiplication table of 6.
+Write a program to print factorial of a given number.
+Write a program to print all the factors of a given number.
+Write a program to print the count of factors of a given number.
+Write a program to check a given number is a prime number or not.
+Write a program to print reverse of digits of a number.
+Write a program to read 5 numbers and print the maximum and minimum number.
+Write a program to read 5 numbers and print the sum of all entered numbers.
+Write a program to print average of n numbers.
+Write a program to read 5 numbers and print only the even numbers.
+Write a program to print the Fibonacci number series up to a given number.
+Write a program to check a given number is Armstrong number or not.
+Write a program to print the reverse of a given number.
+Write a program to check a given number is palindrome number or not.
+Write a program to print the number at 100’s place.
+Write a program to print the nCr of given ‘n’ and ‘r’ values.
+Print the largest digit of given number.
+Print the number of digits in a given number.
+Print the sum of all digits of a given number.
+Print the binary value of 8.
+Write a program to print only even digits of a given number.
+Write a program to print only odd digits of a given number.
+Write a program to print only digits out of a given string.(For example: 'MH43AB3209')
+Print the squares of all numbers from 1 to 10.
+Print the cubes of all numbers from 1 to 10. 
+Write a program to find the sum of all prime numbers between 1 and 50.
+Write a program to find the product of all odd numbers between 1 and 10.
+Write a program to count the number of ‘1’s in a given number.
+Write a program to eliminate all zeroes from a given number.
+Write a program to print all the digits that are less than 5 in a given number.

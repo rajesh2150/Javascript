@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+<body>
+    <script>
+        //destructuring
+        var arr=[10,30,405,6,85,96,38,5]
+        var [x,,y,,,z]=arr;
+        console.log(x,y,z)
+
+        //spread operator
+        let a=[12,23,54,65]
+        let b=[{age:10},{marks:[10,50,54]}]
+        let c=[...a,...b]
+        console.log(c)
+
+        //aliasing
+
+        function emp(fn,ln){
+            this.firstname=fn;
+            this.lastname=ln;
+            
+        }
+
+var emp1= new emp('rajesh','korlapati')  
+console.log(emp1.firstname)
+
+
+        //nested Objects
+        var arr2={firstname:'Rajesh',
+                 lastname:'Korlapati',
+                 address:{
+                    city:'Amalapuram',
+                    town:'P Gannavaram'
+                 }
+    }
+
+    var {firstname,address:{city,town}}=arr2;
+    console.log(city,town)
+    </script>
+    
+</body>
+</html>

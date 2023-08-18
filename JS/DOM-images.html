@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">count:0</div>
+    <button id="next" onclick="next(event)">next</button>
+    <button id="prev" onclick="prev(event)">prev</button>
+    <script>
+        var images=['https://tse4.mm.bing.net/th?id=OIP.RssAwPp3TjTgsV5X_ANLGAHaE7&pid=Api&P=0&h=180',
+                    'https://tse4.mm.bing.net/th?id=OIP.5yqZiH9OMeOXYuvp1mMY3QHaKD&pid=Api&P=0&h=180',
+                    'https://tse1.mm.bing.net/th?id=OIP.5YaAywWX_v_JGosjbRH1IgHaEo&pid=Api&P=0&h=180']
+
+        count=0
+        function next(e){
+            count++
+            var ele=document.getElementById('d1')
+           ele.innerHTML='count:'+count
+           
+        }
+        function prev(){
+            count--;
+            var ele=document.getElementById('d1')
+            ele.innerHTML='count:'+count
+        }
+        if(count==1){
+            var ele=document.getElementById('d1')
+            ele.innerHTML=images[0]
+        }
+        else if(count==2){
+            var ele=document.getElementById('d1')
+            ele.innerHTML=images[1]
+        }
+        else{
+            if(count==3){
+            var ele=document.getElementById('d1')
+            ele.innerHTML=images[2]
+        }
+        }
+    </script>
+</body>
+</html>

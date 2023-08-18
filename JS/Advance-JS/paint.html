@@ -1,0 +1,46 @@
+<html>
+    <body style="background-color: black;">
+        <input type="text" id="color-name">
+        <button type="button" onclick="color()" ondblclick="db()">add</button>
+        <h1 style="display: inline-block; color: white;">color is:<span id="d2" > </span></h1>
+
+        <div id="d1" style="width: 600px;height: 300px;background-color: white;margin: 20 auto; " onmousemove="fun(event)">
+            
+        </div>
+       
+       
+        <script>
+            function db(){
+                console.log('this is db')
+            }
+           
+                
+                function color(){
+                    var color_name=document.getElementById('color-name').value;
+                var h1=document.getElementById('d2')
+                h1.innerHTML=color_name
+                h1.style.color=color_name
+                console.log(color_name)
+                return color_name
+                }
+
+
+            
+            function fun(e){
+               var div1=document.createElement("div")
+               div1.style.backgroundColor=color()
+               div1.style.width='3px'
+               div1.style.height='3px'
+               div1.style.position='absolute'
+               div1.style.top=event.clientY
+               div1.style.left=event.clientX
+            
+               var ele1=document.getElementById('d1')
+               ele1.appendChild(div1)
+
+
+            }
+
+        </script>
+    </body>
+</html>

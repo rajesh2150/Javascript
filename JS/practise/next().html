@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script>
+            	function iter(array){
+					var nextId= 0;
+					return {
+							next: function() {
+									if(nextId < array.length) {
+											return {value: array[nextId++], done: false};
+									} else {
+											return {done: true};
+									}
+							}
+					}
+			}
+			var it = iter(['Hello', 'Iterators', 'Rajesh']);
+			console.log(it.next().value); // 'Hello'
+			console.log(it.next().value); // 'Iterators'
+			
+            console.log(it.next().value)		
+        </script>
+    </body>
+</html>

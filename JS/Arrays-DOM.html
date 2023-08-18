@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #d1{
+            color: black;
+        }
+        .d2{
+            border: 1px solid;
+            padding: 10px;
+        }
+        #d3{
+            color: black;
+            border: 1px red;
+        }
+    </style>
+</head>
+<body>
+    <ul id="d1"></ul>
+    <form name="myfrm" class="d2" onsubmit="myfun(event)">
+        <label>FirstName:<input name="t1" type="text"></label>
+        <button id="b1">Show</button>
+
+    </form>
+    <div id="d3"></div>
+    <script>
+
+        function myfun(e){
+            e.preventDefault();
+            var firstName=document.myfrm.t1.value
+        }
+       
+
+        var arr=['rajesh','lokesh','rakesh','mahesh','vamsi']
+       /* for(var i=0;i<=arr.length-1;i++){
+            var newli=document.createElement("li");
+            newli.innerHTML=arr[i];
+            document.getElementById('d1').appendChild(newli)
+        }
+*/
+
+
+
+
+       
+        arr.forEach(function(x){
+            var newElement=document.createElement("li")
+           newElement.innerHTML=x;
+            document.getElementById('d1').appendChild(newElement)
+        });
+       
+    </script>
+</body>
+</html>

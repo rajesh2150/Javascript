@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <style>
+            h1{
+
+                text-align: center;
+                background-color: lightblue;
+                color: black;
+            }
+            #button{
+                display: inline;
+                background-color: black;
+                color: white;
+            }
+            input{
+                height: 30px;
+                border-radius: 15px;
+                display: inline-block;
+                color:black;
+                margin-bottom: 10px;
+            }
+            button{
+                border: none;
+                padding: 5px;
+                border-radius: 35px;
+                cursor: pointer;
+            }
+            #clear{
+                background-color: lightcoral;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Simple TODO List</h1>
+        <input type="text" id="text" placeholder="Add Task" required>
+        <button type="submit" id="button" onclick="task(event)">Add Task</button>
+        <button type="button" id="clear" onclick="clear(event)">Clear All</button>
+        <ul id="ul">
+
+        </ul>
+        <script>
+           var tasks=[]
+            function task(e){
+                 
+            var task=document.getElementById('text').value;
+
+            var newli=document.createElement("li")
+            newli.innerHTML=task;
+            newli.style.marginBottom='5px'
+            
+            var button=document.createElement("button")
+            button.innerHTML='delete';
+            button.style.backgroundColor='red';
+            button.style.color='black'
+
+            button.onclick=function (e){
+                button.parentElement.remove()
+
+               // button.parentElement.style.textDecoration=''
+            }
+            newli.appendChild(button)
+          
+            document.getElementById('ul').appendChild(newli)
+
+            document.getElementById('text').value=' ' ; //it clears The input box value 
+            }
+            function clear() {
+            var ul = document.getElementById('ul');
+            while (ul.firstChild) {
+                ul.removeChild(ul.firstChild);
+            }
+        }
+           
+        </script>
+    </body>
+</html>

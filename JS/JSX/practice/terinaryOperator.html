@@ -1,0 +1,18 @@
+<html>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <body>
+        <div id="d1"></div>
+        
+        <script type="text/babel">
+            var number=+prompt('Enter a Number:')
+            var abc=number<=10?<h1 style={{backgroundColor:'red'}}>Number in Below 10</h1>:<h1 style={{backgroundColor:'Green'}}>Number is Above 10</h1>
+            var ele=<h1>{abc}</h1>
+         ReactDOM.render(ele,document.getElementById('d1'))   
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Data to Table</title>
+</head>
+<body>
+    <h2>Add Data to Table</h2>
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="age" placeholder="Enter Age">
+    <button onclick="addRow()">Add Data</button>
+    <table id="dataTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Existing data goes here -->
+        </tbody>
+    </table>
+    <script >
+        function addRow() {
+    var nameInput = document.getElementById("name");
+    var ageInput = document.getElementById("age");
+
+    var name = nameInput.value;
+    var age = ageInput.value;
+
+    if (name === "" || age === "") {
+        alert("Please enter both name and age.");
+        return;
+    }
+
+    var table = document.getElementById("dataTable");
+    var newRow = table.insertRow(table.rows.length);
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+
+    cell1.innerHTML = name;
+    cell2.innerHTML = age;
+
+    nameInput.value = "";
+    ageInput.value = "";
+}
+
+    </script>
+</body>
+</html>

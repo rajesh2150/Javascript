@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  </head>
+  <body>
+    <form>
+    <label>Firstname:<br>
+    <input type="text" id='fname' name="fname"><br>
+    
+    <label>Lastname:<br>
+    <input type="text" id='lname' name="lname">
+    <br>
+    <input type="button" name="button" value="submit" onclick="submit(event)">
+    </form>
+<hr>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+           
+        </thead>
+       <tbody id="tbdy">
+            <tr>
+                <td>Rajesh</td>
+                <td>Korlapati</td>
+                <td>rajesh@gmail.com</td>
+                <td>9701506626</td>
+            </tr>
+
+    </tbody>
+    </table>
+    <script>
+        
+            var fname=document.getElementById('fname').value;
+            console.log(fname)
+            
+
+       
+       
+        
+       /*  var firstname=document.getElementById('firstname').value;
+        var lastname=document.getElementById('lastname').value;
+        var newtr=document.createElement("tr")
+
+        var td=document.createElement("td")
+        td.innerHTML=firstname
+        newtr.appendChild(td)
+
+        var td=document.createElement("td")
+        td.innerHTML=lastname
+        newtr.appendChild(td)
+
+        document.getElementById('tbdy').appendChild(newtr)
+        }
+        */
+    </script>
+  </body>
+</html>

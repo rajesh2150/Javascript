@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .d1{
+    color: red;
+   }
+    </style>
+</head>
+<body>
+    <input type="radio" onchange="gender(event)" name="gender" value="Male">Male
+    <input type="radio" onchange="gender(event)" name="gender" value="Female">Female
+    <input type="radio"onchange="gender(event)" name="gender" value="Others">Others
+<br>
+<hr>
+<input type="checkbox" onchange="games(event)" name="game" value="Cricket">cricket
+<input type="checkbox" onchange="games(event)" name="game" value="Chess">chess
+<input type="checkbox" onchange="games(event)" name="game" value="Football">football
+<input type="checkbox" onchange="games(event)" name="game" value="Hockey">hockey
+<input type="checkbox" onchange="games(event)" name="game" value="Volleyball">volleyball
+<input type="checkbox" onclick="newGame(event)" name="game" value="Racing">racing
+
+    <h1>Selected Gender Is :<span id="d1"> </span></h1>
+    <h1>Selected Game Is :<span id="d2"> </span></h1>
+</body>
+<script>
+    function newGame(e){
+    }
+    function games(e){
+        console.log(e)
+    }
+
+
+
+   /* var ele=document.getElementById('d1')
+    function male(){
+        ele.innerHTML=' Male'
+        ele.style.color='red'
+
+    }
+    function female(){
+        ele.innerHTML=' Female'
+        ele.style.color='red'
+
+    }
+    function others(){
+        ele.innerHTML=' Others'
+        ele.style.color='red'
+    }
+        */
+
+    
+</script>
+</html>

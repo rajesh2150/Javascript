@@ -1,0 +1,33 @@
+<html>
+    <body>
+        <script>
+            function contact(){
+                
+            }
+            contact.prototype.email="";
+            contact.prototype.mobile="";
+
+            function Students(f,l,e,m){
+                this.firstname=f;
+                this.lastname=l;
+                this.__proto__.email=e;
+                this.__proto__.mobile=m
+            }
+          
+
+            Students.prototype.company='Mphasis'
+
+
+            var st1=new Students('rajesh','korlapati','Rajesh@gmail.com',988)
+
+            console.dir(Students)
+            console.log(st1)
+            console.log(st1.firstname)
+            console.log(st1.lastname)
+            console.log(st1.email,st1.mobile)
+            
+            console.log(st1.company)
+
+        </script>
+    </body>
+</html>
